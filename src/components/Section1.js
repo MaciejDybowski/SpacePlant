@@ -45,7 +45,7 @@ const Section1 = () => {
                 </div>
             </div>
             <div className='astronaut'>
-                <div data-aos="fade-up">
+                <div data-aos="fade-up" className='imgbox'>
                     <img src={astronaut} alt='astronauta' />
                 </div>
             </div>

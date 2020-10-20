@@ -128,6 +128,11 @@
         .mobile-nav {
             display: flex !important;
         }
+
+        .active {
+            z-index: 99;
+            top: 25% !important;
+        }
     }
 }
 
@@ -142,6 +147,10 @@
         }
         .mobile-nav {
             display: flex !important;
+        }
+        .active {
+            z-index: 99;
+            top: 25% !important;
         }
     }
 }
