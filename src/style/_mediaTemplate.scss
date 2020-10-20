@@ -1,0 +1,71 @@
+@import 'breakpoints';
+
+// ############## Template #1  #############
+// includes all resolution
+
+/* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: $extraSmall) {
+    body{
+        background-color: blue;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $smallMin) and (max-width: $smallMax) {
+    body{
+        background-color: yellow;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $mediumMin) and (max-width: $mediumMax) {
+    body{
+        background-color: green;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $largeMin) and (max-width: $largeMax) {
+    body{
+        background-color: gold;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $extraLarge) {
+    body{
+        background-color: red;
+    }
+} */
+
+
+
+
+// ############## Template #2   ##################
+/*
+// Without small devices < 576px
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $small) {
+    body{
+        background-color: rebeccapurple;
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: $medium) {
+    body{
+        background-color: yellow;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $large) {
+    body{
+        background-color: green;
+    }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $extraLarge) {
+    body{
+        background-color:red;
+    }
+} */

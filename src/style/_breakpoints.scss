@@ -1,0 +1,25 @@
+// for media-min
+$small : 576px;
+$medium : 768px;
+$large : 992px;
+// extraLarge is defined bellow
+
+
+// for media-min and media-max
+// Extra small devices (portrait phones, less than 576px)
+$extraSmall: 575.98px;
+
+// Small devices (landscape phones, 576px and up)
+$smallMin: 576px;
+$smallMax: 767.98px;
+
+//Medium devices (tablets, 768px and up)
+$mediumMin : 768px;
+$mediumMax : 991.98px;
+
+// Large devices (desktops, 992px and up)
+$largeMin : 992px;
+$largeMax : 1199.98px;
+
+// Extra large devices (large desktops, 1200px and up)
+$extraLarge : 1200px;

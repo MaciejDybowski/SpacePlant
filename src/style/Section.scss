@@ -1,0 +1,337 @@
+@import "fonts";
+@import "colors";
+@import "breakpoints";
+
+.section-1 {
+    width: 95%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .form-bg {
+        width: 30%;
+
+        .form {
+            width: 100%;
+            height: 100%;
+            padding: 30px 30px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+
+            .from-btn {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+
+                button {
+                    font-family: $main-font;
+                    font-weight: $normal-weight;
+                    font-size: $global-size;
+                    width: 35%;
+                    height: 100%;
+                    border-radius: 25px;
+                    outline: none;
+                    border: 0;
+                    background-color: transparent;
+                    color: $black;
+                }
+
+                .active {
+                    color: $white;
+                    background-color: rgb(3, 28, 34);
+                }
+            }
+
+            .login-form,
+            .register-form {
+                width: 90%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10%;
+
+                .field {
+                    background-color: rgb(87, 171, 190);
+                    opacity: 0.9;
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 3%;
+                    margin-bottom: 3%;
+                    padding: 15px 15px;
+                    border-radius: 35px;
+
+                    .MuiSvgIcon-root {
+                        color: rgb(3, 28, 34);
+                    }
+
+                    input {
+                        width: 90%;
+                        height: 100%;
+                        border: 0px;
+                        padding-left: 10px;
+                        outline: none;
+                        background-color: transparent;
+                        font-size: $global-size;
+                        color: $white;
+
+                        &::placeholder {
+                            color: white;
+                        }
+                    }
+                }
+
+                .submit-btn {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 10px;
+
+                    button {
+                        font-family: $main-font;
+                        font-weight: $normal-weight;
+                        font-size: $global-size;
+                        width: 35%;
+                        height: 100%;
+                        border-radius: 25px;
+                        outline: none;
+                        border: 0;
+                        background-color: rgb(3, 28, 34);
+                        color: $white;
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .astronaut {
+        width: 70%;
+    }
+
+    img {
+        width: 100%;
+        height: 920px;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: $extraSmall) {
+    .section-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 0%;
+        background-image: url("../images/section-1.png");
+        height: 92vh; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to */
+
+        .form-bg {
+            margin-top: 5%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .form {
+                width: 90%;
+                padding: 5px 5px;
+
+                .from-btn {
+                    margin-top: 10px;
+                    width: 100%;
+
+                    button {
+                        width: 50%;
+                        font-size: 14px;
+                    }
+                }
+
+                .login-form,
+                .register-form {
+                    .field {
+                        height: 40px !important;
+                        padding: 0px 10px;
+
+                        input {
+                            font-size: 14px;
+                        }
+
+                        .MuiSvgIcon-root {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .submit-btn {
+                    button {
+                        font-weight: $normal-weight;
+                        font-size: 14px!important;
+                        width: 45%!important;
+                    }
+                }
+            }
+        }
+
+        .astronaut {
+            display: none;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $smallMin) and (max-width: $smallMax) {
+    .section-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 0%;
+        background-image: url("../images/section-1.png");
+        height: 92vh; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to */
+
+        .form-bg {
+            margin-top: 5%;
+            margin-left: 5%;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+
+            .form {
+                width: 70%;
+
+                .from-btn {
+                    margin-top: 10px;
+                    width: 100%;
+
+                    button {
+                        width: 50%;
+                        font-size: 14px;
+                    }
+                }
+
+                .login-form,
+                .register-form {
+                    .field {
+                        height: 40px !important;
+                        padding: 0px 10px;
+
+                        input {
+                            font-size: 14px;
+                        }
+
+                        .MuiSvgIcon-root {
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .submit-btn {
+                    button {
+                        font-weight: $normal-weight;
+                        font-size: 14px!important;
+                        width: 45%!important;
+                    }
+                }
+            }
+        }
+
+        .astronaut {
+            display: none;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $mediumMin) and (max-width: $mediumMax) {
+    .section-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 0%;
+        background-image: url("../images/section-1.png");
+        height: 92vh; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to */
+
+        .form-bg {
+            margin-top: 10%;
+            margin-left: 5%;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+
+            .form {
+                width: 60%;
+            }
+        }
+
+        .astronaut {
+            display: none;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $largeMin) and (max-width: $largeMax) {
+    .section-1 {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        background-image: url("../images/section-1.png");
+        height: 92vh; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to */
+
+        .form-bg {
+            margin-left: 5%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .form {
+                width: 50%;
+            }
+        }
+
+        .astronaut {
+            display: none;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $extraLarge) and (max-width: 1440px) {
+    .section-1 {
+
+        .form-bg {
+            width: 40%;
+        }
+
+        .astronaut {
+            width: 60%;
+        }
+    }
+}
