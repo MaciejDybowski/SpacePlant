@@ -1,0 +1,60 @@
+@import "fonts";
+@import "colors";
+@import "breakpoints";
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .content {
+        margin-top: 5%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: $extraSmall) {
+    .dashboard {
+        .content {
+            flex-direction: column;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $smallMin) and (max-width: $smallMax) {
+    .dashboard {
+        .content {
+            flex-direction: column;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: $mediumMin) and (max-width: $mediumMax) {
+    .dashboard {
+        .content {
+            flex-direction: column;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: $largeMin) and (max-width: $largeMax) {
+    .dashboard {
+        .content {
+            flex-direction: column;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: $extraLarge) and (max-width: 1440px) {
+}

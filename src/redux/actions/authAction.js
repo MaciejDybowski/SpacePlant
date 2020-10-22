@@ -1,4 +1,4 @@
-export const signIn = (credentials) => {
+export const login = (credentials) => {
     return (dispatch, getState, { getFirebase }) => {
         const firebase = getFirebase();
         firebase.auth().signInWithEmailAndPassword(
@@ -14,7 +14,7 @@ export const signIn = (credentials) => {
     }
 }
 
-export const signOut = () => {
+export const logout = () => {
     return (dispatch, getState, { getFirebase }) => {
         const firebase = getFirebase();
         firebase.auth().signOut()
@@ -26,7 +26,7 @@ export const signOut = () => {
 }
 
 
-export const signUp = (newUser) => {
+export const register = (newUser) => {
     return (dispatch, getState, { getFirebase }) => {
         const firestore = getFirebase().firestore();
         const firebase = getFirebase();
@@ -39,7 +39,9 @@ export const signUp = (newUser) => {
             firestore.collection('users').doc(data.user.uid).set({
                 firstName : newUser.firstName,
                 lastName : newUser.lastName,
-                initials : newUser.firstName[0] + newUser.lastName[0]
+                initials : newUser.firstName[0] + newUser.lastName[0],
+                points: 0,
+                numberOfPlants: 1,
             })
         })
         .then(() => dispatch({type:"ADD_USER"}))

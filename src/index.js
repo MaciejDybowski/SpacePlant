@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import Dashboard from './components/Dashboard';
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
@@ -18,6 +18,12 @@ import firebase from './firebase/config'
 import { isLoaded } from "react-redux-firebase"
 import { useSelector } from 'react-redux'
 
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 const store = createStore(reducers, compose(
   applyMiddleware(thunk.withExtraArgument({ getFirebase })),
@@ -53,7 +59,12 @@ ReactDOM.render(
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
         <AuthIsLoaded>
-          <App />
+          <Router>
+            <Switch>
+              <Route path='/' exact component={App}></Route>
+              <Route path='/dashboard' exact component={Dashboard}></Route>
+            </Switch>
+            </Router>
         </AuthIsLoaded>
       </ReactReduxFirebaseProvider>
     </Provider>
